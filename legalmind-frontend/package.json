@@ -7,7 +7,16 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy:docker": "./deploy.sh docker",
+    "deploy:vercel": "./deploy.sh vercel",
+    "deploy:netlify": "./deploy.sh netlify",
+    "deploy:all": "./deploy.sh all",
+    "docker:build": "docker build -t legalmind-frontend .",
+    "docker:run": "docker run -d -p 3000:80 --name legalmind-frontend legalmind-frontend",
+    "docker:compose": "docker-compose up -d",
+    "docker:stop": "docker-compose down",
+    "docker:logs": "docker-compose logs -f"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",

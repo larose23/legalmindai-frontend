@@ -1,0 +1,22 @@
+{
+  "name": "legalmind-workspace",
+  "version": "1.0.0",
+  "description": "LegalMind AI Frontend Application",
+  "private": true,
+  "workspaces": [
+    "legalmind-frontend"
+  ],
+  "scripts": {
+    "build": "cd legalmind-frontend && pnpm install && pnpm run build",
+    "dev": "cd legalmind-frontend && pnpm run dev",
+    "install:all": "cd legalmind-frontend && pnpm install",
+    "deploy:netlify": "cd legalmind-frontend && pnpm run deploy:netlify"
+  },
+  "devDependencies": {
+    "pnpm": "^10.4.1"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=10.0.0"
+  }
+}
